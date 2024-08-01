@@ -1,0 +1,86 @@
+<div class = "content">
+  <div class="container">
+    <form [formGroup]="circuitForm" (ngSubmit)="onSubmit()">
+      <h2>Crear circuito</h2>
+      <div class="form_group field">
+       <input type="input" class="form__field" placeholder="Name" formControlName="name" />
+       <label for="name" class="form__label">Nombre</label>
+      </div>
+      <div class="form_group field">
+        <textarea type="textarea" rows = "5" class="form__field" placeholder="Descripción" formControlName="description"></textarea>
+        <label for="descripcion" class="form__label">Descripción</label>
+      </div>
+      <div class="form_group field">
+       <input type="input" class="form__field" placeholder="País" formControlName="location" />
+       <label for="pais" class="form__label">Localizacion</label>
+      </div>
+      <!-- <div class="form-group"> -->
+        <mat-select placeholder='--SELECT A COUNTRY--' formControlName="country">
+          @for(pais of paises ; track pais){
+            <mat-option [value]="pais"> {{pais}} </mat-option>
+          }
+        </mat-select>
+        <!-- <div class="custom-select">
+         <div class="select-selected">--Selecciona el país--</div>
+            <select class="select-items select-hide" [ngClass]="{'select-hide': selectHide}" (click)="selectHide = !selectHide">
+                @for(pais of paises ; track pais){
+                  <div>{{pais}}</div>
+                }
+            </select>
+        </div> -->
+       <!-- </div> -->
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="Longitud" formControlName="length"/>
+        <label for="longitud" class="form__label">Longitud del circuito</label>
+       </div>
+       
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="Imagen" formControlName="imagePaths"/>
+        <label for="imagen" class="form__label">Imagen</label>
+       </div>
+       <div class="button-container">
+        <button type="submit" class="center-button">AÑADIR</button>
+       </div>
+    </form>
+     <!-- <form>
+        <h2>Crear circuito</h2>
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+        <label for="name" class="form__label">Nombre</label>
+       </div>
+       
+       <div class="form_group field">
+       <textarea type="textarea" rows = "5" class="form__field" placeholder="Descripción" name="descripcion" id='descripcion' required ></textarea>
+        <label for="descripcion" class="form__label">Descripción</label>
+       </div>
+       
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="País" name="pais" id='pais' required />
+        <label for="pais" class="form__label">Localizacion</label>
+       </div>
+       
+      <div class="form-group">
+        <div class="custom-select">
+         <div class="select-selected">--Selecciona el país--</div>
+            <div class="select-items select-hide" [ngClass]="{'select-hide': selectHide}" (click)="selectHide = !selectHide" >
+                @for(pais of paises ; track pais){
+                  <div>{{pais}}</div>
+                }
+            </div>
+        </div>
+       </div>
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="Longitud" name="longitud" id='longitud' required />
+        <label for="longitud" class="form__label">Longitud del circuito</label>
+       </div>
+       
+       <div class="form_group field">
+         <input type="input" class="form__field" placeholder="Imagen" name="imagen" id='imagen' required />
+        <label for="imagen" class="form__label">Imagen</label>
+       </div>
+       <div class="button-container">
+        <button class="center-button">AÑADIR</button>
+       </div>
+     </form> -->
+    </div>
+   </div>

@@ -1,0 +1,184 @@
+/* Asegura que el body y html ocupen toda la altura de la ventana */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+.center-button{
+    font-family: 'Poppins', sans-serif; 
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 100%;
+    background-color: #FFAF74;
+}
+form {
+    width: 90%;
+}
+
+/* El contenedor que ocupa toda la página */
+.content {
+    font-family: 'Poppins', sans-serif; 
+    display: flex;          
+    justify-content: center;  
+    align-items: center;      
+    height: calc(100% - 40px);            
+    background-image: url('https://static-cdn.jtvnw.net/jtv_user_pictures/b514a542-9e64-48b6-96e8-1f0f08150b2f-channel_offline_image-1920x1080.png');
+    width: 100%;
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    position: relative; /* Necesario para el posicionamiento del h2 */
+}
+
+/* Estilo para el h2 */
+h2 {
+    text-align: center;
+    color: white;
+}
+
+/* Estilos del custom select */
+.custom-select {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    background-color: #222222;
+    color: gray;
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 95%;
+}
+
+/* Estilos del select-selected */
+.select-selected {
+    cursor: pointer;
+    padding: 10px;
+}
+mat-select{
+    margin : 2% 0;
+    width: 100%;
+    color: grey;
+    font-size: 20px;
+    border-bottom: 2px solid grey;
+    height: 30px;
+}
+
+mat-option {
+    background-color: #222222 !important;
+    color: grey;
+}
+
+.mat-mdc-select-panel  {
+    color: grey;
+    background-color: #222222 !important;
+}
+mat-option:hover {
+    background-color: #333232 !important;
+    color: grey;
+}
+
+mat-option.mat-active {
+    background-color: #ff0000 !important;
+    color: grey;
+}
+
+mat-select:hover {
+    border-bottom: 2px solid #FFAF74;
+}
+
+/* Estilos del select-items */
+.select-items {
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: grey;
+    color: #222222;
+    border: none;
+    width: 100%;
+    max-height: 200px; /* Ajusta la altura máxima del menú desplegable */
+    overflow-y: scroll; /* Permite desplazamiento vertical */
+    z-index: 99;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total */
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+/* Estilos para las opciones dentro de select-items */
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.select-items div:hover {
+    background-color: #222222;
+    color: #808080;
+}
+
+/* Ocultar select-items por defecto */
+.select-hide {
+    display: none;
+}
+
+/* Estilos del contenedor del formulario */
+.container {
+    width: 45%;     
+    height: 100%;   
+    background-color:rgba(34, 34, 34, 0.98);
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    position: relative; /* Necesario para la posición del h2 si se usa dentro de este contenedor */
+}
+
+/* Estilos del formulario y sus campos */
+.form_group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100%;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray; 
+    outline: 0;
+    font-size: 1.3rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:focus {
+    border-bottom: 3px solid;
+    border-color:  #FFAF74; 
+    border-image-slice: 1;
+    padding-bottom: 6px;  
+    font-weight: 700;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: gray; 
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
